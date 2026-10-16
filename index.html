@@ -97,7 +97,8 @@
  .card .cap em{display:block;font-style:normal;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--glow);margin-top:8px}
  .card .cap span{display:block;font-size:13.5px;color:var(--dune);margin-top:6px;line-height:1.4}
  .ring-foot{position:absolute;left:40px;bottom:34px;z-index:3;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--dune);pointer-events:none}
- @media(max-width:700px){#ring{height:200vh}.ring-head{top:118px;padding:0 18px;flex-direction:column;align-items:flex-start;gap:8px}.ring-head p{text-align:left;max-width:none}.card{width:176px;height:236px;margin:-118px 0 0 -88px}.card .cap{padding:12px}.card .cap b{font-size:20px}.card .cap em{font-size:9.5px;letter-spacing:.2em;margin-top:5px}.card .cap span{display:none}.ring-foot{left:18px;bottom:22px;font-size:10.5px}}
+ /* phones get the desktop ring scaled down as one scene: same cards, same radius, same turn per scroll */
+ @media(max-width:700px){.ring-head{top:118px;padding:0 18px;flex-direction:column;align-items:flex-start;gap:8px}.ring-head p{text-align:left;max-width:none}.stage{transform:scale(.6);transform-origin:50% 54%}.ring-foot{left:18px;bottom:22px;font-size:10.5px}}
 
  /* sections */
  section{padding:120px 0}
@@ -114,7 +115,13 @@
  .howto{margin-top:26px;display:flex;flex-wrap:wrap;gap:8px 26px;font-size:13.5px;color:var(--dune);font-weight:300}
  .howto kbd{font-family:var(--body);font-weight:400;border:1px solid var(--hair2);border-radius:var(--r);padding:1px 7px;font-size:12.5px;color:var(--sand)}
 
- /* tape rows */
+ /* tape rows: the hero's sunset as a gradient. Horizon and sun at the section top, the sea bands falling into the ground, a faint column where the reflection runs. */
+ #tape{--sunw:480px;position:relative;isolation:isolate;background:
+   radial-gradient(ellipse var(--sunw) 260px at 58% 0%, rgba(254,251,223,.42) 0%, rgba(241,191,125,.26) 22%, rgba(191,131,76,0) 70%),
+   linear-gradient(90deg, rgba(241,191,125,0) 44%, rgba(241,191,125,.06) 58%, rgba(241,191,125,0) 72%),
+   linear-gradient(180deg, #bf834c 0, #8b4229 26px, #43261a 200px, #1b1411 700px, #080403 1300px);
+   background-repeat:no-repeat;background-size:100% 100%,100% 1300px,100% 100%}
+ @media(max-width:700px){#tape{--sunw:300px}}
  .tape{margin-top:56px;border-top:1px solid var(--hair2)}
  .clip{display:grid;grid-template-columns:200px 300px minmax(0,1fr);gap:40px;align-items:center;padding:40px 0;border-bottom:1px solid var(--hair);scroll-margin-top:90px}
  .clip.sel{border-bottom-color:var(--amber)}
@@ -185,14 +192,9 @@
  @media(max-width:980px){.tiles{grid-template-columns:repeat(2,minmax(0,1fr))}}
  @media(max-width:620px){.tiles{grid-template-columns:minmax(0,1fr)}.tiles div{padding:20px 18px}}
 
- footer{padding:80px 0 120px;border-top:1px solid var(--hair2);overflow:hidden}
+ footer{padding:80px 0 100px;border-top:1px solid var(--hair2);overflow:hidden}
  .mark-word{font-family:var(--disp);font-weight:400;font-size:clamp(80px,19vw,300px);line-height:.85;letter-spacing:.1em;text-transform:uppercase;color:transparent;-webkit-text-stroke:1px rgba(250,246,239,.35);white-space:nowrap;margin-left:-.02em}
- footer .cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;margin-top:48px;font-size:14px;color:var(--dune);font-weight:300}
- footer h4{font-size:12px;letter-spacing:.24em;text-transform:uppercase;font-weight:400;color:var(--sand);margin-bottom:12px}
- footer ul{list-style:none;display:grid;gap:6px}
- footer a{color:var(--sand);border-bottom:1px solid var(--hair2)}
- footer a:hover{border-color:var(--amber)}
- @media(max-width:700px){footer{padding:56px 0 80px}footer .cols{grid-template-columns:minmax(0,1fr);gap:26px}}
+ @media(max-width:700px){footer{padding:56px 0 72px}}
 </style>
 </head>
 <body>
@@ -211,6 +213,7 @@
    <div><b>2</b><span>parts of footwork</span></div>
    <div><b>5</b><span>class videos</span></div>
    <div><b>Sep 2</b><span>first Wednesday</span></div>
+   <div><b>Nov</b><span>showcases start</span></div>
   </div>
  </div>
 </header>
@@ -504,11 +507,6 @@
 <footer>
  <div class="wrap">
   <div class="mark-word" aria-hidden="true">Jezabel</div>
-  <div class="cols">
-   <div><h4>Files</h4><ul><li>Raw clips live in the Jezabel Routine Wednesdays folder on the Mac.</li><li>The <a href="https://github.com/elijahcarimbocas/jezabel-routine/releases/tag/originals">originals release</a> holds every untouched phone file.</li></ul></div>
-   <div><h4>Dates</h4><ul><li>Season 4 started Wed Sep 2, 2026.</li><li>No video for Sep 9 or Sep 30.</li><li>Oct 7 came from the team.</li></ul></div>
-   <div><h4>Related</h4><ul><li><a href="https://elijahcarimbocas.github.io/bachata-practice-spots/">Practice spots</a>, where we drill this on Mondays.</li><li>Jezabel is the Romeo Santos and Prince Royce song from Better Late Than Never.</li></ul></div>
-  </div>
  </div>
 </footer>
 
@@ -523,36 +521,39 @@
   const navObs = new IntersectionObserver(([e]) => nav.classList.toggle('on', !e.isIntersecting), { rootMargin: '-68px 0px 0px 0px', threshold: 0 });
   navObs.observe(document.getElementById('top'));
 
-  /* water: the sun path on dark sea, seeded, no randomness between loads */
-  const cv = document.getElementById('water');
-  if (cv && !reduce) {
+  /* water: the sun path on dark sea, seeded, no randomness between loads. One function, two canvases. */
+  const water = (cv, o) => {
+    if (!cv || reduce) return;
     const ctx = cv.getContext('2d');
     let W = 0, H = 0, dpr = 1, t0 = performance.now(), raf = 0, visible = true;
-    const rng = (s => () => { s |= 0; s = s + 0x6D2B79F5 | 0; let t = Math.imul(s ^ s >>> 15, 1 | s); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; })(20260902);
-    const streaks = Array.from({ length: 170 }, () => ({ y: rng(), x: rng() * 2 - 1, w: .25 + rng() * .9, h: .35 + rng() * .9, p: rng() * 6.28, f: .35 + rng() * .9, a: .25 + rng() * .75, hot: rng() }));
+    const rng = (s => () => { s |= 0; s = s + 0x6D2B79F5 | 0; let t = Math.imul(s ^ s >>> 15, 1 | s); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; })(o.seed);
+    const streaks = Array.from({ length: o.n }, () => ({ y: rng(), x: rng() * 2 - 1, w: .25 + rng() * .9, h: .35 + rng() * .9, p: rng() * 6.28, f: .35 + rng() * .9, a: .25 + rng() * .75, hot: rng() }));
     const size = () => { dpr = Math.min(2, devicePixelRatio || 1); W = cv.clientWidth; H = cv.clientHeight; cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0); };
     const draw = (now) => {
       raf = 0;
-      const t = (now - t0) / 1000, horizon = H * .29, sunX = W * .6;
+      const t = (now - t0) / 1000, horizon = H * o.horizon, sunX = W * o.sunX, deep = H - horizon;
       ctx.clearRect(0, 0, W, H);
-      /* sky, sampled from the cover: #321f18 at the top down to #bf834c at the horizon */
-      let g = ctx.createLinearGradient(0, 0, 0, horizon);
-      g.addColorStop(0, '#321f18'); g.addColorStop(.55, '#974a29'); g.addColorStop(1, '#bf834c');
-      ctx.fillStyle = g; ctx.fillRect(0, 0, W, horizon + 1);
-      /* sun core #fefbdf, column #f1bf7d */
-      g = ctx.createRadialGradient(sunX, horizon - 6, 0, sunX, horizon - 6, W * .22);
-      g.addColorStop(0, 'rgba(254,251,223,.95)'); g.addColorStop(.12, 'rgba(241,191,125,.6)'); g.addColorStop(1, 'rgba(236,174,106,0)');
-      ctx.fillStyle = g; ctx.fillRect(0, 0, W, horizon + 2);
+      if (horizon > 0) {
+        /* sky, sampled from the cover: #321f18 at the top down to #bf834c at the horizon */
+        let g = ctx.createLinearGradient(0, 0, 0, horizon);
+        g.addColorStop(0, '#321f18'); g.addColorStop(.55, '#974a29'); g.addColorStop(1, '#bf834c');
+        ctx.fillStyle = g; ctx.fillRect(0, 0, W, horizon + 1);
+        /* sun core #fefbdf, column #f1bf7d */
+        g = ctx.createRadialGradient(sunX, horizon - 6, 0, sunX, horizon - 6, W * .22);
+        g.addColorStop(0, 'rgba(254,251,223,.95)'); g.addColorStop(.12, 'rgba(241,191,125,.6)'); g.addColorStop(1, 'rgba(236,174,106,0)');
+        ctx.fillStyle = g; ctx.fillRect(0, 0, W, horizon + 2);
+      }
       /* sea: #8b4229 under the horizon, #43261a, then the page ground */
-      g = ctx.createLinearGradient(0, horizon, 0, H);
+      let g = ctx.createLinearGradient(0, horizon, 0, H);
       g.addColorStop(0, '#8b4229'); g.addColorStop(.12, '#43261a'); g.addColorStop(.5, '#1b1411'); g.addColorStop(1, '#080403');
-      ctx.fillStyle = g; ctx.fillRect(0, horizon, W, H - horizon);
+      ctx.fillStyle = g; ctx.fillRect(0, Math.max(0, horizon), W, H - Math.max(0, horizon));
       /* path of light: streaks fan out as they come toward the viewer */
-      const glow = qa ? 1 : Math.min(1, t / 1.6);
+      const glow = (qa ? 1 : Math.min(1, t / 1.6)) * o.alpha;
       for (const s of streaks) {
         const d = s.y;                                  /* 0 at the horizon, 1 at the bottom */
-        const y = horizon + d * d * (H - horizon) * .98 + 2;
-        const spread = W * (.015 + d * .33);
+        const y = horizon + d * d * deep * .98 + 2;
+        if (y < -20 || y > H + 20) continue;
+        const spread = W * (.015 + d * o.spread);
         const x = sunX + s.x * spread;
         const w = spread * s.w * (.14 + d * .26) + 2;
         const h = 1 + d * d * 11 * s.h;
@@ -564,27 +565,28 @@
       }
       /* dark bands near the bottom, like the cover's swells */
       for (let i = 0; i < 9; i++) {
-        const yy = horizon + (H - horizon) * (0.42 + i * 0.065) + Math.sin(t * .35 + i) * 3;
+        const yy = horizon + deep * (0.42 + i * 0.065) + Math.sin(t * .35 + i) * 3;
         ctx.fillStyle = `rgba(8,4,3,${.08 + i * .02})`; ctx.fillRect(0, yy, W, 6 + i * 3);
       }
       /* the cover's deep red corner, #5b1613 */
       g = ctx.createRadialGradient(W * 1.02, H * .92, 0, W * 1.02, H * .92, W * .5);
-      g.addColorStop(0, 'rgba(91,22,19,.75)'); g.addColorStop(1, 'rgba(91,22,19,0)');
-      ctx.fillStyle = g; ctx.fillRect(0, horizon, W, H - horizon);
+      g.addColorStop(0, `rgba(91,22,19,${.75 * o.alpha})`); g.addColorStop(1, 'rgba(91,22,19,0)');
+      ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
       if (visible && !qa) raf = requestAnimationFrame(draw);
     };
     const start = () => { if (!raf && visible) raf = requestAnimationFrame(draw); };
-    size(); addEventListener('resize', () => { size(); });
+    size(); addEventListener('resize', () => { size(); if (qa) draw(performance.now()); });
     new IntersectionObserver(([e]) => { visible = e.isIntersecting; if (visible) start(); }).observe(cv);
     start();
-  }
+  };
+  water(document.getElementById('water'), { seed: 20260902, n: 170, horizon: .29, sunX: .6, spread: .33, alpha: 1 });
 
   /* the ring: scroll turns it, idle time keeps it drifting; port of the CircularGallery component */
   const ring = document.getElementById('ring'), ring3d = document.getElementById('ring3d');
   const cards = [...ring3d.querySelectorAll('.card')];
   const step = 360 / cards.length;
   let radius = 560, drift = qa ? 200 : 0, scrollRot = 0, scrolling = false, timer = 0, lastP = -1;
-  const setRadius = () => { radius = innerWidth < 700 ? 290 : innerWidth < 1100 ? 440 : 560; cards.forEach((c, i) => c.dataset.a = i * step); layout(); };
+  const setRadius = () => { radius = 560; layout(); };
   const layout = () => {
     const rot = scrollRot + drift;
     ring3d.style.transform = `rotateY(${rot}deg)`;
