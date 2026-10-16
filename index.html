@@ -49,11 +49,14 @@
  nav{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .5s var(--ease),border-color .5s var(--ease);border-bottom:1px solid transparent}
  nav.on{background:rgba(8,4,3,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-color:var(--hair)}
  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
- .logo{font-family:var(--disp);font-weight:400;font-size:22px;letter-spacing:.16em;text-transform:uppercase;color:var(--sand)}
- .nl{display:flex;gap:34px}
+ .logo{display:flex;align-items:baseline;gap:12px;min-width:0;font-family:var(--body);font-weight:400;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--dune);white-space:nowrap}
+ .logo b{font-family:var(--disp);font-weight:400;font-size:22px;letter-spacing:.16em;color:var(--sand)}
+ .logo i{font-style:normal;font-weight:300;color:var(--hair2)}
+ .nl{display:flex;gap:26px}
  .nl a{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--dune);padding:6px 0}
  .nl a:hover{color:var(--sand)}
- @media(max-width:700px){nav .wrap{flex-wrap:wrap;height:auto;padding-top:14px;padding-bottom:10px;gap:6px 0}.nl{width:100%;gap:10px;flex-wrap:wrap}.nl a{font-size:11px;letter-spacing:.12em;white-space:nowrap;padding:4px 0}}
+ @media(max-width:1180px){nav .wrap{flex-wrap:wrap;height:auto;padding-top:14px;padding-bottom:10px;gap:6px 0}.nl{width:100%}}
+ @media(max-width:700px){.logo{flex-wrap:wrap;white-space:normal;row-gap:0;column-gap:10px;font-size:11px;letter-spacing:.16em}.logo b{font-size:20px}.nl{gap:10px;flex-wrap:wrap}.nl a{font-size:11px;letter-spacing:.12em;white-space:nowrap;padding:4px 0}}
 
  /* hero */
  header{position:relative;min-height:100dvh;overflow:hidden;isolation:isolate;display:flex;flex-direction:column;justify-content:flex-end}
@@ -199,7 +202,7 @@
 </head>
 <body>
 <div class="grain" aria-hidden="true"></div>
-<nav id="nav"><div class="wrap"><a class="logo" href="#top">Jezabel</a><div class="nl"><a href="#ring">Nights</a><a href="#tape">Videos</a><a href="#partner">Partner work</a><a href="#footwork">Footwork</a><a href="#weight">Weight</a></div></div></nav>
+<nav id="nav"><div class="wrap"><a class="logo" href="#top"><span>Phoenix Bachata Dance Jezabel Routine</span><i>|</i><span>Season 4</span><i>|</i><b>Jezabel</b></a><div class="nl"><a href="#ring">Nights</a><a href="#tape">Videos</a><a href="#partner">Partner work</a><a href="#footwork">Footwork</a><a href="#weight">Weight</a></div></div></nav>
 
 <header id="top">
  <div class="still" aria-hidden="true"></div>
