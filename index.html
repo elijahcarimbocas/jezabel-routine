@@ -1,0 +1,511 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="author" content="Elijah Carimbocas">
+<title>Jezabel Routine</title>
+<meta name="description" content="The performance team's Jezabel routine, eight by eight, with every Wednesday class video it came from, the footwork, and the weight transfers.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Jezabel Routine">
+<meta property="og:description" content="Seven eights of partner work, two parts of footwork, every class video, and what Carlitos said on tape.">
+<meta property="og:url" content="https://elijahcarimbocas.github.io/jezabel-routine/">
+<meta property="og:image" content="https://elijahcarimbocas.github.io/jezabel-routine/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://elijahcarimbocas.github.io/jezabel-routine/img/og.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@400;500&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+ /* Same skin as the practice-spots site: white canvas, black ink, pink-violet wash on the hero, periwinkle bands, 12px cards, pills. Single light theme on purpose. */
+ :root{
+  --ink:#000000; --canvas:#ffffff; --graphite:#333333; --slate:#666666; --ash:#999999; --silver:#cccccc;
+  --chip:rgba(0,0,0,.05); --wash:linear-gradient(rgba(150,196,255,.16) 0%,#ffffff 100%);
+  --shadow:rgba(0,0,0,.1) 0 0 6px 0; --shadow-lg:rgba(0,0,0,.1) 0 0 20px 0;
+  --lift:rgba(0,0,0,.05) 0 .8px 2.4px -.6px,rgba(0,0,0,.05) 0 2.4px 7.2px -1.25px,rgba(0,0,0,.05) 0 6.4px 19.1px -1.875px,rgba(0,0,0,.05) 0 20px 60px -2.5px;
+  --disp:'Funnel Display','Avenir Next',system-ui,sans-serif; --body:'Hanken Grotesk',system-ui,-apple-system,sans-serif;
+  color-scheme:light;
+ }
+ *{box-sizing:border-box;margin:0;padding:0}
+ html{background:var(--canvas);scroll-behavior:smooth}
+ body{background:linear-gradient(180deg,#fbe9ff 0%,#f1ecff 22%,#e8f1ff 45%,#e6f8f7 70%,#fcecfb 100%);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.45;letter-spacing:-.02em;-webkit-font-smoothing:antialiased}
+ a{color:inherit;text-decoration:none}
+ img,video{display:block;max-width:100%}
+ button{font:inherit;color:inherit;letter-spacing:inherit}
+ :focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+ .wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+ @media(max-width:600px){.wrap{padding:0 16px}}
+
+ nav{position:sticky;top:0;z-index:50;background:var(--ink)}
+ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:56px;gap:16px}
+ .logo{font-family:var(--disp);font-weight:500;font-size:22px;color:#fff;letter-spacing:-.02em;white-space:nowrap}
+ .logo b{font-weight:500;color:#f8c4ff}
+ .nl{display:flex;gap:4px}
+ .nl a{color:#fff;font-size:14px;font-weight:600;padding:7px 12px;border-radius:960px}
+ .nl a:hover{background:rgba(255,255,255,.14)}
+ @media(max-width:600px){nav .wrap{flex-wrap:wrap;height:auto;padding-top:10px;padding-bottom:8px;gap:0}.nl{width:100%;margin-left:-8px}.nl a{padding:5px 8px;font-size:13px;white-space:nowrap}}
+
+ header{position:relative;overflow:hidden;isolation:isolate;color:#fff;background:linear-gradient(110deg,#2a1033 0%,#4b2357 55%,#7a4a86 100%)}
+ header::before{content:"";position:absolute;inset:0;z-index:-2;pointer-events:none;background:
+   linear-gradient(90deg,rgba(60,20,70,.66) 0%,rgba(150,80,160,.32) 48%,rgba(248,196,255,.12) 100%),
+   linear-gradient(0deg,rgba(0,0,0,.35) 0%,transparent 55%)}
+ .hero-body{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:40px;align-items:center;padding-block:72px 64px}
+ h1{font-family:var(--disp);font-weight:500;font-size:clamp(2.6rem,6vw,4.6rem);line-height:1;letter-spacing:-.02em;text-wrap:balance}
+ .lede{max-width:44ch;font-size:18px;margin-top:16px;color:rgba(255,255,255,.92)}
+ header .facts{display:grid;grid-template-columns:repeat(4,minmax(0,max-content));gap:10px;margin-top:28px}
+ header .facts div{background:rgba(255,255,255,.16);backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px);border-radius:12px;padding:10px 16px}
+ header .facts b{display:block;font-family:var(--disp);font-weight:500;font-size:30px;line-height:1.05}
+ header .facts span{font-size:13px;color:rgba(255,255,255,.85)}
+ @media(max-width:600px){header .facts{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}header .facts div{padding:8px 10px}header .facts b{font-size:22px}header .facts span{font-size:11px}}
+ .hero-rot{position:relative;aspect-ratio:4/5;max-height:520px;width:100%;border-radius:12px;overflow:hidden;border:6px solid #fff;box-shadow:var(--shadow-lg);background:#2a1033}
+ .hero-rot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .9s ease}
+ .hero-rot img.show{opacity:1}
+ .hero-cap{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.9);margin-top:12px}
+ @media(max-width:860px){.hero-body{grid-template-columns:minmax(0,1fr);padding-block:48px 40px}.hero-rot{aspect-ratio:16/10}}
+
+ section{padding:80px 0}
+ h2{font-family:var(--disp);font-weight:500;font-size:clamp(2rem,4vw,2.75rem);line-height:1.05;letter-spacing:-.02em}
+ .sub{color:var(--slate);margin-top:10px;max-width:70ch}
+ h3{font-size:20px;font-weight:700;letter-spacing:-.04em;line-height:1.25}
+ .mark{border:1px solid var(--ink);background:#fff;border-radius:8px;padding:6px 12px;font-size:13px;font-weight:700;letter-spacing:-.04em;cursor:pointer;white-space:nowrap}
+ .mark:hover{background:var(--ink);color:#fff}
+ .mark:active{transform:translateY(1px)}
+ .mark i{font-style:normal;font-weight:600;color:var(--ash);margin-right:6px}
+ .mark:hover i{color:#f8c4ff}
+ .marks{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+
+ /* Tape: one row per class, oldest first */
+ .tape{display:grid;grid-template-columns:minmax(0,1fr);gap:20px;margin-top:28px}
+ .clip{display:grid;grid-template-columns:120px 260px minmax(0,1fr);gap:24px;align-items:center;background:#fff;border-radius:16px;box-shadow:var(--lift);padding:20px}
+ .clip.sel{box-shadow:var(--lift),0 0 0 3px #000}
+ .when{align-self:start}
+ .player,.notes{min-width:0}
+ .when b{display:block;font-family:var(--disp);font-weight:500;font-size:26px;line-height:1.05}
+ .when span{display:block;font-size:13px;color:var(--ash);margin-top:4px}
+ .when em{display:block;font-style:normal;font-size:13px;color:var(--graphite);margin-top:10px;line-height:1.35}
+ .player video{width:100%;aspect-ratio:9/16;border-radius:10px;background:#111;object-fit:contain}
+ .speeds{display:flex;gap:4px;margin-top:10px;background:var(--chip);border-radius:960px;padding:4px}
+ .speeds button{flex:1;border:0;background:none;border-radius:960px;padding:7px 0;font-size:13px;font-weight:600;color:var(--graphite);cursor:pointer}
+ .speeds button[aria-pressed="true"]{background:#fff;color:var(--ink);box-shadow:var(--shadow)}
+ .notes p{color:var(--graphite);margin-top:8px}
+ .notes .orig{font-size:13px;color:var(--ash);margin-top:14px}
+ .notes .orig a{text-decoration:underline;text-underline-offset:2px;color:var(--ink)}
+ @media(max-width:900px){.clip{grid-template-columns:100px minmax(0,1fr);align-items:start}.player{grid-column:1/-1;order:3;display:flex;flex-direction:column;align-items:center}.player video{height:min(72vh,640px);width:auto;max-width:100%;aspect-ratio:auto}.speeds{width:100%;max-width:360px}.notes{grid-column:2}}
+ @media(max-width:600px){.clip{grid-template-columns:minmax(0,1fr);padding:14px}.notes{grid-column:1}.when em{display:none}}
+
+ /* Partner work: one card per eight */
+ .eights{display:grid;grid-template-columns:minmax(0,1fr);gap:24px;margin-top:28px}
+ .eight{background:#fff;border-radius:16px;box-shadow:var(--shadow);padding:24px 24px 22px}
+ .eh{display:grid;grid-template-columns:120px minmax(0,1fr);gap:20px;align-items:start}
+ .big{font-family:var(--disp);font-weight:500;font-size:56px;line-height:.95;letter-spacing:-.03em}
+ .eh p{color:var(--graphite);margin-top:6px}
+ .eh p b{font-weight:700}
+ .counts{list-style:none;display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:6px;margin-top:18px}
+ .counts li{background:var(--wash);border-radius:10px;padding:10px 12px;min-height:88px;grid-column:span var(--n,1)}
+ .counts li b{display:block;font-family:var(--disp);font-weight:500;font-size:20px;line-height:1;margin-bottom:6px}
+ .counts li span{font-size:13.5px;color:var(--graphite);line-height:1.35;display:block}
+ .counts li.hold{background:rgba(0,0,0,.04)}
+ .strip{margin-top:16px}
+ .strip img{width:100%;border-radius:10px}
+ .strip figcaption{font-size:13px;color:var(--ash);margin-top:6px}
+ .said{margin-top:18px;border-top:1px solid #eee;padding-top:14px}
+ .said h4{font-size:13px;font-weight:700;color:var(--ash);margin-bottom:8px}
+ .said ul{list-style:none;display:grid;gap:8px}
+ .said li{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:10px;align-items:start;font-size:15px;color:var(--graphite)}
+ .said q{quotes:"\201C" "\201D";color:var(--ink)}
+ @media(max-width:860px){.eh{grid-template-columns:minmax(0,1fr);gap:6px}.big{font-size:44px}.counts{grid-template-columns:repeat(4,minmax(0,1fr))}.counts li{grid-column:span min(var(--n,1),4)}}
+ @media(max-width:600px){.eight{padding:16px}.counts{grid-template-columns:minmax(0,1fr)}.counts li{grid-column:auto;min-height:0}.said li{grid-template-columns:minmax(0,1fr)}.said li .mark{justify-self:start}.strip{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:10px}.strip img{width:760px;max-width:none}}
+
+ /* Footwork: two nights side by side */
+ .fw{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:28px}
+ .night{background:#fff;border-radius:16px;box-shadow:var(--shadow);padding:24px}
+ .night h3{margin-bottom:4px}
+ .night .k{font-size:14px;color:var(--slate);margin-bottom:14px}
+ .steps{list-style:none;counter-reset:s;display:grid;gap:10px}
+ .steps li{counter-increment:s;display:grid;grid-template-columns:28px minmax(0,1fr) max-content;gap:10px;align-items:start;padding:10px 12px;border-radius:10px;background:var(--wash)}
+ .steps li::before{content:counter(s);font-family:var(--disp);font-weight:500;font-size:20px;line-height:1;color:var(--ink)}
+ .steps li div{font-size:15px;color:var(--graphite)}
+ .steps li div b{display:block;color:var(--ink)}
+ .steps li .mark{padding:5px 10px}
+ .steps q{quotes:"\201C" "\201D"}
+ @media(max-width:860px){.fw{grid-template-columns:minmax(0,1fr)}}
+ @media(max-width:600px){.night{padding:16px}.steps li{grid-template-columns:24px minmax(0,1fr)}.steps li .mark{grid-column:2}}
+
+ /* Weight transfers: wash tiles */
+ .tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:28px}
+ .tiles div{background:#fff;border-radius:12px;box-shadow:var(--shadow);padding:18px 20px;display:flex;flex-direction:column;gap:6px}
+ .tiles b{font-size:17px;font-weight:700;letter-spacing:-.04em;line-height:1.2}
+ .tiles q{quotes:"\201C" "\201D";color:var(--graphite);font-size:15px}
+ .tiles p{color:var(--slate);font-size:14px}
+ .tiles .mark{align-self:flex-start;margin-top:auto;padding-top:6px}
+ .tiles .mark{margin-top:8px}
+ @media(max-width:900px){.tiles{grid-template-columns:repeat(2,minmax(0,1fr))}}
+ @media(max-width:560px){.tiles{grid-template-columns:minmax(0,1fr)}}
+
+ .howto{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px 18px;font-size:14px;color:var(--slate)}
+ .howto kbd{font-family:var(--body);background:#fff;border:1px solid var(--silver);border-radius:6px;padding:1px 7px;font-size:13px;color:var(--ink)}
+
+ footer{background:var(--ink);color:#b3b3b3;padding:48px 0 64px;font-size:13px}
+ footer .cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+ footer h4{font-size:14px;font-weight:700;color:#fff;margin-bottom:10px}
+ footer ul{list-style:none;display:grid;gap:4px}
+ footer a{text-decoration:underline;text-underline-offset:2px;color:#fff}
+ @media(max-width:700px){footer .cols{grid-template-columns:minmax(0,1fr)}}
+ @media (prefers-reduced-motion:reduce){.hero-rot img{transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><a class="logo" href="#top">Jezabel <b>Routine</b></a><div class="nl"><a href="#tape">Videos</a><a href="#partner">Partner work</a><a href="#footwork">Footwork</a><a href="#weight">Weight</a></div></div></nav>
+
+<header id="top">
+ <div class="wrap hero-body">
+  <div>
+   <h1>Jezabel, one Wednesday at a time</h1>
+   <p class="lede">Everything the team has learned since Sep 2, with the class video each piece came from.</p>
+   <div class="facts">
+    <div><b>7</b><span>Eights of partner work</span></div>
+    <div><b>2</b><span>Parts of footwork</span></div>
+    <div><b>5</b><span>Class videos</span></div>
+    <div><b>Sep 2</b><span>First Wednesday</span></div>
+   </div>
+  </div>
+  <figure><div class="hero-rot" id="heroRot">
+   <img src="img/2026-09-02-sep-2.jpg" alt="Carlitos in a red tank top with a follow in black, walking the first eight in shadow position" class="show">
+   <img src="img/2026-09-16-sep-16.jpg" alt="Carlitos from behind, correcting the shadow position on Sep 16" loading="lazy">
+   <img src="img/2026-10-01-oct-1.jpg" alt="Carlitos and a follow in the top hold on Oct 1" loading="lazy">
+   <img src="img/2026-09-04-hawaii-3.jpg" alt="Carlitos and Cece in red, Hawaii workshop" loading="lazy">
+  </div><figcaption class="hero-cap" id="heroCap">Sep 2, night one</figcaption></figure>
+ </div>
+</header>
+
+<section id="tape">
+ <div class="wrap">
+  <h2>Every class on tape</h2>
+  <p class="sub">Oldest first. The two Hawaii clips sit where they happened, two days after the first Wednesday. Each one plays here at 1080p60, and the untouched phone file is linked under the notes.</p>
+  <div class="howto"><span><kbd>0.5x</kbd> and <kbd>0.75x</kbd> for the feet</span><span><kbd>Loop</kbd> runs the clip on repeat</span><span>With a clip playing, <kbd>,</kbd> and <kbd>.</kbd> step one frame back or forward</span><span>Jump buttons open the exact second</span></div>
+
+  <div class="tape">
+
+   <article class="clip" id="c-sep2">
+    <div class="when"><b>Wed Sep 2</b><span>0:34</span><em>Night one. Carlitos in the red tank.</em></div>
+    <div class="player"><video controls preload="metadata" playsinline poster="img/2026-09-02-sep-2.jpg" src="video/2026-09-02-sep-2.mp4"></video>
+     <div class="speeds"><button type="button" data-s="0.5">0.5x</button><button type="button" data-s="0.75">0.75x</button><button type="button" data-s="1" aria-pressed="true">1x</button><button type="button" class="loop" aria-pressed="false">Loop</button></div></div>
+    <div class="notes">
+     <h3>The first three eights, counted slow</h3>
+     <p>Half Madrid into shadow, the sensual move in shadow, then the prep and the DJ turn into the catch. Carlitos counts every beat at about one a second, so this is the clip to learn the order from. The fourth run at the end is the catch and the counterbalance.</p>
+     <div class="marks"><button type="button" class="mark" data-v="c-sep2" data-t="0"><i>0:00</i>1-8</button><button type="button" class="mark" data-v="c-sep2" data-t="8.8"><i>0:09</i>2-8</button><button type="button" class="mark" data-v="c-sep2" data-t="16.3"><i>0:16</i>Prep, then 3-8</button><button type="button" class="mark" data-v="c-sep2" data-t="25.3"><i>0:25</i>The catch</button></div>
+     <p class="orig"><a href="https://github.com/elijahcarimbocas/jezabel-routine/releases/download/originals/2026-09-02-sep-2.MOV">Original file</a>, 102 MB, straight off the phone.</p>
+    </div>
+   </article>
+
+   <article class="clip" id="c-hi4">
+    <div class="when"><b>Fri Sep 4</b><span>1:35, Hawaii</span><em>Carlitos and Cece in red. Rides and contra balances workshop.</em></div>
+    <div class="player"><video controls preload="metadata" playsinline poster="img/2026-09-04-hawaii-4.jpg" src="video/2026-09-04-hawaii-4.mp4"></video>
+     <div class="speeds"><button type="button" data-s="0.5">0.5x</button><button type="button" data-s="0.75">0.75x</button><button type="button" data-s="1" aria-pressed="true">1x</button><button type="button" class="loop" aria-pressed="false">Loop</button></div></div>
+    <div class="notes">
+     <h3>The contrabalance, talked through</h3>
+     <p>The reference for 6-8. Carlitos on how you enter and exit a ride (seven, tap eight), the basic open into the half close with tension, down on seven and top on eight, then the rule that runs the whole thing: guide with the right, support with the left.</p>
+     <div class="marks"><button type="button" class="mark" data-v="c-hi4" data-t="10.6"><i>0:11</i>Seven, tap eight</button><button type="button" class="mark" data-v="c-hi4" data-t="23.6"><i>0:24</i>Basic open, half close</button><button type="button" class="mark" data-v="c-hi4" data-t="34.6"><i>0:35</i>Down 7, top 8</button><button type="button" class="mark" data-v="c-hi4" data-t="53.6"><i>0:54</i>Second move</button><button type="button" class="mark" data-v="c-hi4" data-t="71.5"><i>1:12</i>Guide with the right</button><button type="button" class="mark" data-v="c-hi4" data-t="80.9"><i>1:21</i>With counts</button></div>
+     <p class="orig"><a href="https://github.com/elijahcarimbocas/jezabel-routine/releases/download/originals/2026-09-04-hawaii-4.MOV">Original file</a>, 280 MB.</p>
+    </div>
+   </article>
+
+   <article class="clip" id="c-hi3">
+    <div class="when"><b>Fri Sep 4</b><span>3:35, Hawaii</span><em>Same workshop, danced through with music.</em></div>
+    <div class="player"><video controls preload="metadata" playsinline poster="img/2026-09-04-hawaii-3.jpg" src="video/2026-09-04-hawaii-3.mp4"></video>
+     <div class="speeds"><button type="button" data-s="0.5">0.5x</button><button type="button" data-s="0.75">0.75x</button><button type="button" data-s="1" aria-pressed="true">1x</button><button type="button" class="loop" aria-pressed="false">Loop</button></div></div>
+    <div class="notes">
+     <h3>The contrabalance in motion</h3>
+     <p>No talking on this one, just Carlitos and Cece running the rides and contra balances to a song. Watch it at 0.5x after the talk-through above and the leans make sense. This is the clip to copy the shape from.</p>
+     <p class="orig"><a href="https://github.com/elijahcarimbocas/jezabel-routine/releases/download/originals/2026-09-04-hawaii-3.MOV">Original file</a>, 636 MB.</p>
+    </div>
+   </article>
+
+   <article class="clip" id="c-sep16">
+    <div class="when"><b>Wed Sep 16</b><span>1:56</span><em>Second eight through the fifth, with corrections.</em></div>
+    <div class="player"><video controls preload="metadata" playsinline poster="img/2026-09-16-sep-16.jpg" src="video/2026-09-16-sep-16.mp4"></video>
+     <div class="speeds"><button type="button" data-s="0.5">0.5x</button><button type="button" data-s="0.75">0.75x</button><button type="button" data-s="1" aria-pressed="true">1x</button><button type="button" class="loop" aria-pressed="false">Loop</button></div></div>
+    <div class="notes">
+     <h3>The shadow, the clock, and the balance pattern</h3>
+     <p>The corrections are the reason to rewatch this one: the follow's arm goes up and in front, feet and hips in line, down to the lateral side, open your toes, the one sits in the diagonal, knee up, the foot comes to the side. Two full eights with counts at 1:37.</p>
+     <div class="marks"><button type="button" class="mark" data-v="c-sep16" data-t="13.6"><i>0:14</i>Not back here, up here</button><button type="button" class="mark" data-v="c-sep16" data-t="19.1"><i>0:19</i>Shadow into the turn</button><button type="button" class="mark" data-v="c-sep16" data-t="31.4"><i>0:31</i>Hips in line</button><button type="button" class="mark" data-v="c-sep16" data-t="52.1"><i>0:52</i>Down to the lateral side</button><button type="button" class="mark" data-v="c-sep16" data-t="62.6"><i>1:03</i>Going left, going straight</button><button type="button" class="mark" data-v="c-sep16" data-t="74.7"><i>1:15</i>Tension, open your toes</button><button type="button" class="mark" data-v="c-sep16" data-t="84.4"><i>1:24</i>Knee up, foot to the side</button><button type="button" class="mark" data-v="c-sep16" data-t="97.5"><i>1:37</i>Two full eights</button></div>
+     <p class="orig"><a href="https://github.com/elijahcarimbocas/jezabel-routine/releases/download/originals/2026-09-16-sep-16.MOV">Original file</a>, 343 MB.</p>
+    </div>
+   </article>
+
+   <article class="clip" id="c-sep23">
+    <div class="when"><b>Wed Sep 23</b><span>2:04</span><em>Footwork night, both parts.</em></div>
+    <div class="player"><video controls preload="metadata" playsinline poster="img/2026-09-23-sep-23.jpg" src="video/2026-09-23-sep-23.mp4"></video>
+     <div class="speeds"><button type="button" data-s="0.5">0.5x</button><button type="button" data-s="0.75">0.75x</button><button type="button" data-s="1" aria-pressed="true">1x</button><button type="button" class="loop" aria-pressed="false">Loop</button></div></div>
+    <div class="notes">
+     <h3>The tap is a weight transfer</h3>
+     <p>Part one is the tap with the weight transfer, hips held on the diagonal, inside then outside. Part two from 1:02 is step, tap, heels drop, slide back. Four eights with music at 1:47. The full breakdown is in the footwork section below.</p>
+     <div class="marks"><button type="button" class="mark" data-v="c-sep23" data-t="2.3"><i>0:02</i>Tap with a weight transfer</button><button type="button" class="mark" data-v="c-sep23" data-t="18.9"><i>0:19</i>Hips diagonal</button><button type="button" class="mark" data-v="c-sep23" data-t="28.2"><i>0:28</i>1 and 2, 3, tap</button><button type="button" class="mark" data-v="c-sep23" data-t="62.4"><i>1:02</i>Part two</button><button type="button" class="mark" data-v="c-sep23" data-t="85.6"><i>1:26</i>Both parts in a row</button><button type="button" class="mark" data-v="c-sep23" data-t="103"><i>1:43</i>With music</button></div>
+     <p class="orig"><a href="https://github.com/elijahcarimbocas/jezabel-routine/releases/download/originals/2026-09-23-sep-23.MOV">Original file</a>, 367 MB.</p>
+    </div>
+   </article>
+
+   <article class="clip" id="c-oct1">
+    <div class="when"><b>Thu Oct 1</b><span>1:19</span><em>The back half of the partner work.</em></div>
+    <div class="player"><video controls preload="metadata" playsinline poster="img/2026-10-01-oct-1.jpg" src="video/2026-10-01-oct-1.mp4"></video>
+     <div class="speeds"><button type="button" data-s="0.5">0.5x</button><button type="button" data-s="0.75">0.75x</button><button type="button" data-s="1" aria-pressed="true">1x</button><button type="button" class="loop" aria-pressed="false">Loop</button></div></div>
+    <div class="notes">
+     <h3>Top hold, the 45 degree turn, transfer back, inside the window</h3>
+     <p>Carlitos with the hold up top, then the right turn he says to dive into at 45 degrees without pushing or pulling, the transfer back without blocking with the right, and the turn that starts by going up with the left and inside the window. Ends on shoulder, shoulder, open and close.</p>
+     <div class="marks"><button type="button" class="mark" data-v="c-oct1" data-t="0"><i>0:00</i>Hold up top</button><button type="button" class="mark" data-v="c-oct1" data-t="12.8"><i>0:13</i>Dive the right turn, 45 degrees</button><button type="button" class="mark" data-v="c-oct1" data-t="28.1"><i>0:28</i>Guide with the right</button><button type="button" class="mark" data-v="c-oct1" data-t="39.8"><i>0:40</i>Transfer, don't block</button><button type="button" class="mark" data-v="c-oct1" data-t="48.1"><i>0:48</i>Counted</button><button type="button" class="mark" data-v="c-oct1" data-t="55.3"><i>0:55</i>Inside the window</button><button type="button" class="mark" data-v="c-oct1" data-t="65.6"><i>1:06</i>Light, no palms</button><button type="button" class="mark" data-v="c-oct1" data-t="73.4"><i>1:13</i>Shoulder, shoulder, open and close</button></div>
+     <p class="orig"><a href="https://github.com/elijahcarimbocas/jezabel-routine/releases/download/originals/2026-10-01-oct-1.MOV">Original file</a>, 235 MB.</p>
+    </div>
+   </article>
+
+   <article class="clip" id="c-oct7">
+    <div class="when"><b>Wed Oct 7</b><span>1:29</span><em>From the team. I was out sick.</em></div>
+    <div class="player"><video controls preload="metadata" playsinline poster="img/2026-10-07-oct-7.jpg" src="video/2026-10-07-oct-7.mp4"></video>
+     <div class="speeds"><button type="button" data-s="0.5">0.5x</button><button type="button" data-s="0.75">0.75x</button><button type="button" data-s="1" aria-pressed="true">1x</button><button type="button" class="loop" aria-pressed="false">Loop</button></div></div>
+    <div class="notes">
+     <h3>The whole footwork sequence in one go</h3>
+     <p>Hips inside and outside, step tap push, down and up on the support leg, the cross that has to make a line, and the side cha-cha finish. Carlitos runs it slow, then a little faster at 0:57. Lower quality because it came through a phone chat, but every step is readable.</p>
+     <div class="marks"><button type="button" class="mark" data-v="c-oct7" data-t="0"><i>0:00</i>Basic, close</button><button type="button" class="mark" data-v="c-oct7" data-t="4.1"><i>0:04</i>Hips inside and outside</button><button type="button" class="mark" data-v="c-oct7" data-t="19.8"><i>0:20</i>Step, tap, push</button><button type="button" class="mark" data-v="c-oct7" data-t="31.4"><i>0:31</i>Down, up, support leg</button><button type="button" class="mark" data-v="c-oct7" data-t="40.7"><i>0:41</i>Cross, create a line</button><button type="button" class="mark" data-v="c-oct7" data-t="57.4"><i>0:57</i>A little faster</button><button type="button" class="mark" data-v="c-oct7" data-t="79.3"><i>1:19</i>Side cha-cha finish</button></div>
+     <p class="orig"><a href="https://github.com/elijahcarimbocas/jezabel-routine/releases/download/originals/2026-10-07-oct-7.MOV">Original file</a>, 15 MB, as it arrived.</p>
+    </div>
+   </article>
+
+  </div>
+ </div>
+</section>
+
+<section id="partner">
+ <div class="wrap">
+  <h2>The partner work, eight by eight</h2>
+  <p class="sub">My notes from class in order, counted the salsa way: 1-8 is the first eight, 2-8 the second, like 1-2-3, 5-6-7, then 2-2-3, 5-6-7. Under each eight is what Carlitos said on tape about it, with the second to jump to. Every count box is from my notes unless it says otherwise.</p>
+
+  <div class="eights">
+
+   <article class="eight" id="e1">
+    <div class="eh"><span class="big">1-8</span><div><h3>Half Madrid into shadow</h3><p>The half Madrid puts her in front of me, both facing the same way. In shadow my feet are <b>step, tap</b>, not the full basic.</p></div></div>
+    <ol class="counts">
+     <li style="--n:8"><b>1 to 8</b><span>Half Madrid, landing in shadow position. Lead feet in shadow: step, tap.</span></li>
+    </ol>
+    <figure class="strip"><img src="img/strip-1-8.jpg" alt="Eight frames from the Sep 2 video, one per count of the first eight" loading="lazy"><figcaption>Sep 2, one frame on each count as Carlitos called it. Shadow by the back half, her turn on the last counts.</figcaption></figure>
+    <div class="said"><h4>On tape</h4><ul>
+     <li><button type="button" class="mark" data-v="c-sep2" data-t="0"><i>Sep 2</i>0:00</button><span>Counted one through eight at walking speed. Nothing said over it, so the frames above are the notes.</span></li>
+    </ul></div>
+   </article>
+
+   <article class="eight" id="e2">
+    <div class="eh"><span class="big">2-8</span><div><h3>Sensual move in shadow</h3><p>Still in shadow. The move is slow for the first half and <b>speeds up on 5 to 8</b>.</p></div></div>
+    <ol class="counts">
+     <li style="--n:4"><b>1 to 4</b><span>Sensual move in shadow, her arm up and in front of her, not behind.</span></li>
+     <li style="--n:4"><b>5 to 8</b><span>Same move, sped up. The prep for the DJ turn comes off the end of this.</span></li>
+    </ol>
+    <figure class="strip"><img src="img/strip-2-8.jpg" alt="Eight frames from the Sep 2 video, one per count of the second eight" loading="lazy"><figcaption>Sep 2, second eight, one frame per count.</figcaption></figure>
+    <div class="said"><h4>On tape</h4><ul>
+     <li><button type="button" class="mark" data-v="c-sep2" data-t="8.8"><i>Sep 2</i>0:09</button><span>Second eight, counted slow.</span></li>
+     <li><button type="button" class="mark" data-v="c-sep16" data-t="13.6"><i>Sep 16</i>0:14</button><span>To the follow about the arm: <q>not back here. Up here. Just in front of you.</q></span></li>
+     <li><button type="button" class="mark" data-v="c-sep16" data-t="19.1"><i>Sep 16</i>0:19</button><span>Counted one, two, three, then five through eight, straight into the turn.</span></li>
+    </ul></div>
+   </article>
+
+   <article class="eight" id="e3">
+    <div class="eh"><span class="big">3-8</span><div><h3>Prep, DJ turn, catch with the counterbalance</h3><p>The prep is the whole move. <b>Place the weight into my right hand</b>, fingers under her shoulder pocket, while I am tapped on my left. Then DJ turn her and catch her with the counterbalance. All of it lives inside this eight.</p></div></div>
+    <ol class="counts">
+     <li style="--n:3"><b>Prep</b><span>Weight into the right hand, fingers under the shoulder pocket, tapped on the left. On tape the word prep lands before the one.</span></li>
+     <li style="--n:3"><b>DJ turn</b><span>Turn the follow from that hand. Carlitos calls <q>for next move</q> on the four, so the turn is going by five.</span></li>
+     <li style="--n:2"><b>Catch</b><span>Catch her with the counterbalance. The next eight starts with the hold up top.</span></li>
+    </ol>
+    <figure class="strip"><img src="img/strip-3-8.jpg" alt="Eight frames from the Sep 2 video, one per count of the third eight" loading="lazy"><figcaption>Sep 2, third eight. Bent over on the early counts, her arm out on the turn by the end.</figcaption></figure>
+    <figure class="strip"><img src="img/strip-catch.jpg" alt="Eight frames from the Sep 2 video showing the catch and the counterbalance" loading="lazy"><figcaption>Sep 2, the run after it: the catch and the lean.</figcaption></figure>
+    <div class="said"><h4>On tape</h4><ul>
+     <li><button type="button" class="mark" data-v="c-sep2" data-t="16.3"><i>Sep 2</i>0:16</button><span><q>Prep.</q> Then one through four, <q>for next move</q>, five through eight.</span></li>
+     <li><button type="button" class="mark" data-v="c-sep2" data-t="25.3"><i>Sep 2</i>0:25</button><span>Another eight for the catch and the counterbalance.</span></li>
+     <li><button type="button" class="mark" data-v="c-sep16" data-t="31.4"><i>Sep 16</i>0:31</button><span><q>Remember your feet, your hips are in line.</q> Then on the catch: she goes up, and my arms are not going the same direction she is.</span></li>
+     <li><button type="button" class="mark" data-v="c-sep16" data-t="41.3"><i>Sep 16</i>0:41</button><span><q>Just go back here.</q> <q>Down with it.</q> One, two, three.</span></li>
+    </ul></div>
+   </article>
+
+   <article class="eight" id="e4">
+    <div class="eh"><span class="big">4-8</span><div><h3>The Clock</h3><p>We are <b>holding up top on the 8</b> coming out of the catch. The first half goes down, then I push her back with the weight transfer, then tap on 8.</p></div></div>
+    <ol class="counts">
+     <li class="hold" style="--n:1"><b>8</b><span>Of the eight before: hold up top.</span></li>
+     <li style="--n:4"><b>1 to 4</b><span>Going down.</span></li>
+     <li style="--n:2"><b>5 and 6</b><span>Push the follow back with the weight transfer.</span></li>
+     <li style="--n:1"><b>8</b><span>Tap.</span></li>
+    </ol>
+    <div class="said"><h4>On tape</h4><ul>
+     <li><button type="button" class="mark" data-v="c-oct1" data-t="0"><i>Oct 1</i>0:00</button><span>One, two, three, five, six, seven, eight, then: <q>we hold</q> it <q>top, for variation.</q></span></li>
+     <li><button type="button" class="mark" data-v="c-sep16" data-t="52.1"><i>Sep 16</i>0:52</button><span><q>And then we go down to the lateral side.</q> One through eight.</span></li>
+     <li><button type="button" class="mark" data-v="c-sep16" data-t="62.6"><i>Sep 16</i>1:03</button><span><q>We're just going to go left, we got you back. One, two, three, four, going straight. Five, six, seven, eight.</q></span></li>
+     <li><button type="button" class="mark" data-v="c-sep16" data-t="97.5"><i>Sep 16</i>1:37</button><span>Two full eights counted end to end, this one and the next.</span></li>
+    </ul></div>
+   </article>
+
+   <article class="eight" id="e5">
+    <div class="eh"><span class="big">5-8</span><div><h3>Counterbalance her right turn, then a cross-body turn</h3><p>I <b>counterbalance the follow's right turn</b>, then lead a cross-body turn. Carlitos frames the turn as diving in at 45 degrees, no push and no pull.</p></div></div>
+    <ol class="counts">
+     <li style="--n:4"><b>1 to 4</b><span>Her right turn, counterbalanced. Dive, 45 degrees, no push, no pull.</span></li>
+     <li style="--n:4"><b>5 to 8</b><span>Cross-body turn. Knee up, foot to the side, then tap.</span></li>
+    </ol>
+    <div class="said"><h4>On tape</h4><ul>
+     <li><button type="button" class="mark" data-v="c-oct1" data-t="12.8"><i>Oct 1</i>0:13</button><span><q>We dive the right turn. Two, three, top, and pull. And that's 45 degrees. We dive, we don't push, we don't pull.</q></span></li>
+     <li><button type="button" class="mark" data-v="c-sep16" data-t="74.7"><i>Sep 16</i>1:15</button><span><q>Tension here, same.</q> <q>Here down, open your toes.</q> <q>Our one sits in the diagonal. Come to the center. Come straight, come out.</q></span></li>
+     <li><button type="button" class="mark" data-v="c-sep16" data-t="84.4"><i>Sep 16</i>1:24</button><span><q>Knee up forward.</q> <q>The foot comes to the side, not in front. This pattern is your balance. Knee up real straight. So, we're going to tap. Tap, and go on.</q></span></li>
+    </ul></div>
+   </article>
+
+   <article class="eight" id="e6">
+    <div class="eh"><span class="big">6-8</span><div><h3>Contra-balance ride</h3><p>The ride Carlitos and Cece taught in Hawaii, in red. I <b>guide with the right</b> and <b>transfer back</b> without blocking. The two Hawaii clips above are the reference.</p></div></div>
+    <ol class="counts">
+     <li style="--n:8"><b>1 to 8</b><span>Contra-balance ride. Guide with the right, support with the left, transfer the weight back, never block with the right.</span></li>
+    </ol>
+    <div class="said"><h4>On tape</h4><ul>
+     <li><button type="button" class="mark" data-v="c-oct1" data-t="28.1"><i>Oct 1</i>0:28</button><span><q>I guide with my right, and here we guide back.</q> Seven, eight.</span></li>
+     <li><button type="button" class="mark" data-v="c-oct1" data-t="39.8"><i>Oct 1</i>0:40</button><span><q>Remember that we transfer and we don't block, we don't block here with our right, so we go, we transfer back.</q> Then one through eight.</span></li>
+     <li><button type="button" class="mark" data-v="c-hi4" data-t="71.5"><i>Hawaii</i>1:12</button><span><q>Here we guide, here we support. We don't guide with our left. We guide with our right.</q></span></li>
+     <li><button type="button" class="mark" data-v="c-hi4" data-t="10.6"><i>Hawaii</i>0:11</button><span>On getting in and out of any ride: <q>whatever you do here, you can do it 20 times. Just make sure that when you end, you'll be here on seven, tap eight. When you prep, seven, tap eight.</q></span></li>
+     <li><button type="button" class="mark" data-v="c-hi3" data-t="0"><i>Hawaii</i>0:00</button><span>The same material with music, no talking.</span></li>
+    </ul></div>
+   </article>
+
+   <article class="eight" id="e7">
+    <div class="eh"><span class="big">7-8</span><div><h3>Another ride, turn under the elbow</h3><p>A full measure of another ride, and this one carries a <b>turn under the elbow</b>. Carlitos starts it by going up with the left and inside the window, then it finishes shoulder, shoulder, open and close.</p></div></div>
+    <ol class="counts">
+     <li style="--n:4"><b>1 to 4</b><span>Up with the left, inside the window, start to turn. Light connection, no palms.</span></li>
+     <li style="--n:4"><b>5 to 8</b><span>Turn under the elbow. Shoulder, shoulder, then open and close.</span></li>
+    </ol>
+    <div class="said"><h4>On tape</h4><ul>
+     <li><button type="button" class="mark" data-v="c-oct1" data-t="55.3"><i>Oct 1</i>0:55</button><span><q>Now we go up with our left, we go inside the window so we start to turn. Two, three, four.</q></span></li>
+     <li><button type="button" class="mark" data-v="c-oct1" data-t="65.6"><i>Oct 1</i>1:06</button><span><q>And here, light connected, we don't go with our palms here, so very light.</q></span></li>
+     <li><button type="button" class="mark" data-v="c-oct1" data-t="73.4"><i>Oct 1</i>1:13</button><span><q>Shoulder, shoulder.</q> Seven. <q>Open and close.</q></span></li>
+    </ul></div>
+   </article>
+
+  </div>
+ </div>
+</section>
+
+<section id="footwork">
+ <div class="wrap">
+  <h2>Footwork</h2>
+  <p class="sub">Separate from the partner work. Sep 23 is where it was taught in two parts, Oct 7 is the whole sequence run top to bottom. Each step is Carlitos' own words with the second it happens.</p>
+  <div class="fw">
+
+   <div class="night">
+    <h3>Sep 23, taught in two parts</h3>
+    <p class="k">Carlitos and the follow side by side at the mirror, feet first, then the arms.</p>
+    <ol class="steps">
+     <li><div><b>The tap is a weight transfer</b><q>It's not just to tap, it's actually a tap with a weight transfer.</q></div><button type="button" class="mark" data-v="c-sep23" data-t="2.3">0:02</button></li>
+     <li><div><b>The "and" is the switch</b><q>When we have our weight on our left, and we switch on our right, we have the one and.</q></div><button type="button" class="mark" data-v="c-sep23" data-t="11.2">0:11</button></li>
+     <li><div><b>Hips on the diagonal</b><q>Now we just hold our hips, diagonal. So one time it was inside, and then we went outside with our legs.</q></div><button type="button" class="mark" data-v="c-sep23" data-t="18.9">0:19</button></li>
+     <li><div><b>Count it</b><q>Five, six, seven, go. One and two, three, tap.</q> Then <q>five and six, seven.</q></div><button type="button" class="mark" data-v="c-sep23" data-t="28.2">0:28</button></li>
+     <li><div><b>Arms on the hips, same pace</b><q>We keep the pace in the same time in order to show the arms on our hips.</q></div><button type="button" class="mark" data-v="c-sep23" data-t="51.5">0:52</button></li>
+     <li><div><b>Part two: step, tap</b><q>The second part, very, very simple.</q> <q>We just step, tap, that's one, two.</q></div><button type="button" class="mark" data-v="c-sep23" data-t="62.4">1:02</button></li>
+     <li><div><b>Heels drop, slide back</b><q>Here we drop our heels on the surface, and dropping our heels, we slide back. Three, four.</q></div><button type="button" class="mark" data-v="c-sep23" data-t="72.2">1:12</button></li>
+     <li><div><b>Other direction, same thing</b><q>If it goes in the direction, we do the same.</q></div><button type="button" class="mark" data-v="c-sep23" data-t="81.2">1:21</button></li>
+     <li><div><b>Both parts in a row</b><q>Step, tap, heels go down, we slide back, and tap</q>, then into part two with counts.</div><button type="button" class="mark" data-v="c-sep23" data-t="85.6">1:26</button></li>
+     <li><div><b>Everything together, with music</b>Four eights counted over the song.</div><button type="button" class="mark" data-v="c-sep23" data-t="103">1:43</button></li>
+    </ol>
+   </div>
+
+   <div class="night">
+    <h3>Oct 7, the whole sequence</h3>
+    <p class="k">The team's clip. Carlitos alone from behind, slow first, then a little faster.</p>
+    <ol class="steps">
+     <li><div><b>Basic, close</b><q>Basic, one, two, three, four, close.</q></div><button type="button" class="mark" data-v="c-oct7" data-t="0">0:00</button></li>
+     <li><div><b>Hips inside, then outside</b><q>We start with high energy, it means inside, so we have to rotate our hips, so inside and outside.</q></div><button type="button" class="mark" data-v="c-oct7" data-t="4.1">0:04</button></li>
+     <li><div><b>The count</b><q>One and two, three, four, five and six, seven, eight.</q></div><button type="button" class="mark" data-v="c-oct7" data-t="11.8">0:12</button></li>
+     <li><div><b>Step, tap, push</b><q>And we step, tap, push. Tap, step, tap, push, tap.</q></div><button type="button" class="mark" data-v="c-oct7" data-t="19.8">0:20</button></li>
+     <li><div><b>Arms with the legs</b><q>Our arms are going to be in sync with our legs.</q></div><button type="button" class="mark" data-v="c-oct7" data-t="28.2">0:28</button></li>
+     <li><div><b>Down, up, support leg down</b><q>We go down, up, we keep our support leg down, and we go down, up, step, tap.</q></div><button type="button" class="mark" data-v="c-oct7" data-t="31.4">0:31</button></li>
+     <li><div><b>Cross, make a line</b><q>And here, cross, make sure that you create a line.</q></div><button type="button" class="mark" data-v="c-oct7" data-t="40.7">0:41</button></li>
+     <li><div><b>Side, back, step, tap</b><q>To the side, back, step, tap, to the side, create a line.</q></div><button type="button" class="mark" data-v="c-oct7" data-t="43.9">0:44</button></li>
+     <li><div><b>Cross to the side, neutral, tap</b><q>Then we cross to the side, step, neutral, tap.</q></div><button type="button" class="mark" data-v="c-oct7" data-t="52.6">0:53</button></li>
+     <li><div><b>A little faster</b><q>Five, six, seven, basic, one, two, three, five, six, seven, tap</q>, then two eights straight.</div><button type="button" class="mark" data-v="c-oct7" data-t="57.4">0:57</button></li>
+     <li><div><b>The finish</b><q>We finish with line, step, side cha-cha, cross, side, then cha-cha.</q></div><button type="button" class="mark" data-v="c-oct7" data-t="79.3">1:19</button></li>
+    </ol>
+   </div>
+
+  </div>
+ </div>
+</section>
+
+<section id="weight">
+ <div class="wrap">
+  <h2>Weight transfers, every one on tape</h2>
+  <p class="sub">The part that has to be right. Each tile is one rule, in Carlitos' words where he said it, with the second it was said.</p>
+  <div class="tiles">
+   <div><b>The tap moves the weight</b><q>It's not just to tap, it's actually a tap with a weight transfer.</q><p>Footwork part one. Weight on the left, the switch to the right is the "and".</p><button type="button" class="mark" data-v="c-sep23" data-t="2.3"><i>Sep 23</i>0:02</button></div>
+   <div><b>Transfer back, never block</b><q>Remember that we transfer and we don't block, we don't block here with our right, so we go, we transfer back.</q><p>The contra-balance ride, 6-8.</p><button type="button" class="mark" data-v="c-oct1" data-t="39.8"><i>Oct 1</i>0:40</button></div>
+   <div><b>Push her back on 5 and 6</b><p>My note from the clock, 4-8: counts 5 and 6 push the follow back with the weight transfer, then tap on 8.</p><button type="button" class="mark" data-v="c-sep16" data-t="52.1"><i>Sep 16</i>0:52</button></div>
+   <div><b>Weight into the right hand</b><p>My note before the DJ turn, 3-8: place the weight into the right hand, fingers under her shoulder pocket, while tapped on the left.</p><button type="button" class="mark" data-v="c-sep2" data-t="16.3"><i>Sep 2</i>0:16</button></div>
+   <div><b>Dive, no push, no pull</b><q>We dive, we don't push, we don't pull.</q><p>Her right turn in 5-8, at 45 degrees.</p><button type="button" class="mark" data-v="c-oct1" data-t="21.7"><i>Oct 1</i>0:22</button></div>
+   <div><b>Support leg stays down</b><q>We go down, up, we keep our support leg down.</q><p>Footwork, the down and up before the step, tap.</p><button type="button" class="mark" data-v="c-oct7" data-t="31.4"><i>Oct 7</i>0:31</button></div>
+   <div><b>The foot comes to the side</b><q>The foot comes to the side, not in front. This pattern is your balance. Knee up real straight.</q><p>The cross-body turn in 5-8.</p><button type="button" class="mark" data-v="c-sep16" data-t="86.8"><i>Sep 16</i>1:27</button></div>
+   <div><b>Seven, tap eight</b><q>Just make sure that when you end, you'll be here on seven, tap eight. When you prep, seven, tap eight.</q><p>In and out of every ride.</p><button type="button" class="mark" data-v="c-hi4" data-t="10.6"><i>Hawaii</i>0:11</button></div>
+   <div><b>Guide with the right</b><q>Here we guide, here we support. We don't guide with our left. We guide with our right.</q><p>The rides. Same cue on Oct 1 at 0:28.</p><button type="button" class="mark" data-v="c-hi4" data-t="71.5"><i>Hawaii</i>1:12</button></div>
+  </div>
+ </div>
+</section>
+
+<footer>
+ <div class="wrap cols">
+  <div><h4>Files</h4><ul><li>Raw clips live in the Jezabel Routine Wednesdays folder on the Mac.</li><li>The <a href="https://github.com/elijahcarimbocas/jezabel-routine/releases/tag/originals">originals release</a> holds every untouched phone file.</li></ul></div>
+  <div><h4>Dates</h4><ul><li>Season 4 started Wed Sep 2, 2026.</li><li>No video for Sep 9 or Sep 30.</li><li>Oct 7 came from the team.</li></ul></div>
+  <div><h4>Related</h4><ul><li><a href="https://elijahcarimbocas.github.io/bachata-practice-spots/">Practice spots</a>, where we drill this on Mondays.</li></ul></div>
+ </div>
+</footer>
+
+<script>
+(() => {
+  const clips = [...document.querySelectorAll('.clip')];
+  let active = null;
+  const select = (clip) => {
+    clips.forEach(c => c.classList.toggle('sel', c === clip));
+    active = clip.querySelector('video');
+  };
+  clips.forEach(clip => {
+    const v = clip.querySelector('video');
+    const speeds = [...clip.querySelectorAll('.speeds button[data-s]')];
+    speeds.forEach(b => b.addEventListener('click', () => {
+      v.playbackRate = +b.dataset.s;
+      speeds.forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+      select(clip);
+    }));
+    const loop = clip.querySelector('.loop');
+    loop.addEventListener('click', () => { v.loop = !v.loop; loop.setAttribute('aria-pressed', String(v.loop)); select(clip); });
+    v.addEventListener('play', () => {
+      clips.forEach(c => { const o = c.querySelector('video'); if (o !== v) o.pause(); });
+      select(clip);
+    });
+    v.addEventListener('seeking', () => select(clip));
+  });
+  document.querySelectorAll('.mark[data-v]').forEach(b => b.addEventListener('click', () => {
+    const clip = document.getElementById(b.dataset.v);
+    if (!clip) return;
+    const v = clip.querySelector('video');
+    select(clip);
+    clip.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    const go = () => { v.currentTime = +b.dataset.t; v.play().catch(() => {}); };
+    if (v.readyState >= 1) go(); else v.addEventListener('loadedmetadata', go, { once: true });
+  }));
+  addEventListener('keydown', e => {
+    if (!active || e.target.closest('input,textarea,select')) return;
+    if (e.key === ',' || e.key === '.') {
+      e.preventDefault();
+      active.pause();
+      const step = 1 / 60;
+      active.currentTime = Math.max(0, active.currentTime + (e.key === ',' ? -step : step));
+    }
+  });
+  // hero poster rotation, same as the practice-spots hero
+  const imgs = [...document.querySelectorAll('#heroRot img')];
+  const caps = ['Sep 2, night one', 'Sep 16, the corrections', 'Oct 1, the top hold', 'Sep 4, Hawaii'];
+  const cap = document.getElementById('heroCap');
+  let i = 0;
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches) setInterval(() => {
+    imgs[i].classList.remove('show'); i = (i + 1) % imgs.length; imgs[i].classList.add('show'); cap.textContent = caps[i];
+  }, 4500);
+})();
+</script>
+</body>
+</html>
