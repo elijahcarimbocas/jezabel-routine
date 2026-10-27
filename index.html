@@ -144,6 +144,9 @@
  .notes .orig{font-size:13.5px;color:var(--dune);margin-top:18px}
  .notes .orig a{color:var(--sand);border-bottom:1px solid var(--hair2)}
  .notes .orig a:hover{border-color:var(--amber)}
+ /* landscape clips: full notes column at 16:9 instead of a letterboxed 9:16 box */
+ .clip.wide .player video{width:100%;height:auto;aspect-ratio:16/9}
+ @media(min-width:981px){.clip.wide{grid-template-columns:200px minmax(0,1fr)}.clip.wide .notes{grid-column:2}}
  @media(max-width:980px){.clip{grid-template-columns:150px minmax(0,1fr);align-items:start;gap:24px}.player{grid-column:1/-1;order:3;display:flex;flex-direction:column;align-items:center}.player video{height:min(72vh,640px);width:auto;max-width:100%;aspect-ratio:auto}.speeds{width:100%;max-width:360px}.notes{grid-column:2}.when b{font-size:40px}.when b small{font-size:18px}}
  @media(max-width:700px){.clip{grid-template-columns:minmax(0,1fr);padding:28px 0}.notes{grid-column:1}.when em{display:none}}
 
@@ -214,7 +217,7 @@
   <div class="facts">
    <div><b>7</b><span>eights of partner work</span></div>
    <div><b>2</b><span>parts of footwork</span></div>
-   <div><b>5</b><span>class videos</span></div>
+   <div><b>6</b><span>class videos</span></div>
    <div><b>Sep 2</b><span>first Wednesday</span></div>
    <div><b>Nov</b><span>showcases start</span></div>
   </div>
@@ -232,8 +235,9 @@
    <button type="button" class="card" data-go="c-sep23"><img src="img/2026-09-23-sep-23.jpg" alt="Sep 23 footwork night" loading="lazy"><span class="cap"><b>Sep 23</b><em>Wednesday, 2:04</em><span>Footwork, taught in two parts</span></span></button>
    <button type="button" class="card" data-go="c-oct1"><img src="img/2026-10-01-oct-1.jpg" alt="Oct 1, the top hold" loading="lazy"><span class="cap"><b>Oct 1</b><em>Thursday, 1:19</em><span>Top hold, the 45 degree turn, inside the window</span></span></button>
    <button type="button" class="card" data-go="c-oct7"><img src="img/2026-10-07-oct-7.jpg" alt="Oct 7 footwork from the team" loading="lazy"><span class="cap"><b>Oct 7</b><em>Wednesday, 1:29</em><span>The whole footwork sequence in one go</span></span></button>
+   <button type="button" class="card" data-go="c-oct21"><img src="img/2026-10-21-oct-21.jpg" alt="Oct 21, Carlitos and his partner side by side at the mirror" loading="lazy" style="object-position:38% 50%"><span class="cap"><b>Oct 21</b><em>Wednesday, 0:50</em><span>Footwork side by side, then two eights together</span></span></button>
   </div></div>
-  <div class="ring-foot" id="ringFoot">Seven nights</div>
+  <div class="ring-foot" id="ringFoot">Eight nights</div>
  </div>
 </section>
 
@@ -325,6 +329,18 @@
      <p>Hips inside and outside. Step, tap, push. Down and up on the support leg. The cross that has to make a line. Then the side cha-cha finish. Carlitos runs it slow, then a little faster at 0:57. Lower quality because it came through a phone chat, but every step is readable.</p>
      <div class="marks"><button type="button" class="mark" data-v="c-oct7" data-t="0"><i>0:00</i>Basic, close</button><button type="button" class="mark" data-v="c-oct7" data-t="4.1"><i>0:04</i>Hips inside and outside</button><button type="button" class="mark" data-v="c-oct7" data-t="19.8"><i>0:20</i>Step, tap, push</button><button type="button" class="mark" data-v="c-oct7" data-t="31.4"><i>0:31</i>Down, up, support leg</button><button type="button" class="mark" data-v="c-oct7" data-t="40.7"><i>0:41</i>Cross, create a line</button><button type="button" class="mark" data-v="c-oct7" data-t="57.4"><i>0:57</i>A little faster</button><button type="button" class="mark" data-v="c-oct7" data-t="79.3"><i>1:19</i>Side cha-cha finish</button></div>
      <p class="orig"><a href="https://github.com/elijahcarimbocas/jezabel-routine/releases/download/originals/2026-10-07-oct-7.MOV">Original file</a>, 15 MB, as it arrived.</p>
+    </div>
+   </article>
+
+   <article class="clip wide" id="c-oct21">
+    <div class="when"><b>Oct <small>Wednesday the 21st</small></b><span>0:50</span><em>Shot sideways, the whole floor in frame.</em></div>
+    <div class="player"><video controls preload="metadata" playsinline poster="img/2026-10-21-oct-21.jpg" src="video/2026-10-21-oct-21.mp4"></video>
+     <div class="speeds"><button type="button" data-s="0.5">0.5x</button><button type="button" data-s="0.75">0.75x</button><button type="button" data-s="1" aria-pressed="true">1x</button><button type="button" class="loop" aria-pressed="false">Loop</button></div></div>
+    <div class="notes">
+     <h3>Footwork side by side, then two eights together</h3>
+     <p>Carlitos and his partner run the footwork next to each other, facing the mirror, while he counts it out. Heads come in at 0:20. At 0:28 they turn in and take two counted eights of partner work. He ends on what's coming: <q>How do we explain this for next week, chicos? So that's for next week.</q></p>
+     <div class="marks"><button type="button" class="mark" data-v="c-oct21" data-t="1.8"><i>0:02</i>We go, one and two</button><button type="button" class="mark" data-v="c-oct21" data-t="19.9"><i>0:20</i>With heads</button><button type="button" class="mark" data-v="c-oct21" data-t="28"><i>0:28</i>Into the partner work</button><button type="button" class="mark" data-v="c-oct21" data-t="29.5"><i>0:30</i>First eight</button><button type="button" class="mark" data-v="c-oct21" data-t="37.1"><i>0:37</i>Second eight</button><button type="button" class="mark" data-v="c-oct21" data-t="44.7"><i>0:45</i>For next week</button></div>
+     <p class="orig"><a href="https://github.com/elijahcarimbocas/jezabel-routine/releases/download/originals/2026-10-21-oct-21.MOV">Original file</a>, 149 MB.</p>
     </div>
    </article>
 
